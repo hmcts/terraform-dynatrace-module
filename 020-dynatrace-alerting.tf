@@ -5,7 +5,7 @@ resource "dynatrace_alerting" "alerts" {
   rules {
     rule {
       include_mode     = each.value.include_mode
-      tags             = [for r in var.tags : "${each.key}.${each.value}"] #toset(var.tags) #["Environment:${var.env}"]
+      tags             = [for k,v in var.tags : {k = v}]
       delay_in_minutes = each.value.delay_in_minutes
       severity_level   = each.value.severity_level
     }
