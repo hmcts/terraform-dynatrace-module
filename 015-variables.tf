@@ -12,3 +12,7 @@ variable "dt_alerts" {
 variable "env" {
   description = "Environment tag"
 }
+
+variable "emails" {
+  
+}
