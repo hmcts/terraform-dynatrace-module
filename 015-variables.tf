@@ -9,9 +9,6 @@ variable "dynatrace_token" {
 variable "dt_alerts" {
   description = "Dynatrace Alerts"
 }
-variable "env" {
-  description = "Environment tag"
-}
 
 variable "emails" {
 
