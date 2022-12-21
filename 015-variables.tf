@@ -14,7 +14,7 @@ variable "env" {
 }
 
 variable "emails" {
-  
+
 }
 variable "tags" {
 
