@@ -9,7 +9,9 @@ variable "dynatrace_token" {
 variable "dt_alerts" {
   description = "Dynatrace Alerts"
 }
-
+variable "enable_email_integration" {
+  default = false
+}
 variable "alert_rules" {}
 variable "alert_filters" {}
 variable "email_name" {}

@@ -1,4 +1,5 @@
 resource "dynatrace_email_notification" "email_integration" {
+  count      = var.enable_email_integration ? 1 : 0
   active     = var.enabled
   name       = var.email_name
   profile    = var.alerting_profile_id
