@@ -13,4 +13,16 @@ resource "dynatrace_alerting" "alerts" {
       }
     }
   }
+  filters {
+    dynamic "filter" {
+      for_each = var.alert_filters
+      content {
+        predefined {
+          negate = filter.value.negate
+          type   = filter.value.type
+        }
+      }
+    }
+  }
+
 }

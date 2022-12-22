@@ -11,6 +11,7 @@ variable "dt_alerts" {
 }
 
 variable "alert_rules" {}
+variable "alert_filters" {}
 variable "email_name" {}
 variable "enabled" {}
 variable "alerting_profile_id" {}
