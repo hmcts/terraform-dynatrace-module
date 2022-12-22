@@ -10,7 +10,7 @@ variable "dt_alerts" {
   description = "Dynatrace Alerts"
 }
 
-
+variable "alert_rules" {}
 variable "email_name" {}
 variable "enabled" {}
 variable "alerting_profile_id" {}

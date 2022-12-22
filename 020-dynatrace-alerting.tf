@@ -3,11 +3,14 @@ resource "dynatrace_alerting" "alerts" {
   name            = each.value.name
   management_zone = each.value.dt_management_zone
   rules {
-    rule {
-      include_mode     = each.value.include_mode
-      tags             = var.tags
-      delay_in_minutes = each.value.delay_in_minutes
-      severity_level   = each.value.severity_level
+    dynamic "rule" {
+      for_each = var.alert_rules
+      content {
+        include_mode     = rule.value.include_mode
+        tags             = var.tags
+        delay_in_minutes = rule.value.delay_in_minutes
+        severity_level   = rule.value.severity_level
+      }
     }
   }
 }
