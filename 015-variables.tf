@@ -12,15 +12,28 @@ variable "dt_alerts" {
 variable "enable_email_integration" {
   default = false
 }
-variable "alert_rules" {}
-variable "alert_filters" {}
-variable "email_name" {}
-variable "enabled" {}
-variable "alerting_profile_id" {}
-variable "email_body" {}
-variable "email_subject" {}
-variable "email_receivers" {}
-variable "email_cc_receivers" {}
+variable "alert_rules" { default = null }
+variable "alert_filters" { default = null }
+variable "email_name" { default = null }
+variable "enabled" { default = false }
+variable "alerting_profile_id" { default = null }
+variable "email_body" { default = null }
+variable "email_subject" { default = null }
+variable "email_receivers" { default = null }
+variable "email_cc_receivers" { default = null }
+
+variable "enable_snow_integration" {
+  default = false
+}
+variable "snow_enabled" { default = false }
+variable "snow_send_incidents" { default = false }
+variable "snow_message" { default = null }
+variable "snow_name" { default = null }
+variable "snow_alerting_profile_id" { default = null }
+variable "snow_username" { default = null }
+variable "snow_url" { default = null }
+
+
 variable "tags" {
 
 }

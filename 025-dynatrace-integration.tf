@@ -9,3 +9,14 @@ resource "dynatrace_email_notification" "email_integration" {
   body       = var.email_body
   depends_on = [dynatrace_alerting.alerts]
 }
+resource "dynatrace_service_now_notification" "snow_integration" {
+  count     = var.enable_snow_integration ? 1 : 0
+  active    = var.snow_enabled
+  incidents = var.snow_send_incidents
+  message   = var.snow_message
+  name      = var.snow_name
+  profile   = var.snow_alerting_profile_id
+  username  = var.snow_username
+  url       = var.snow_url
+
+}
