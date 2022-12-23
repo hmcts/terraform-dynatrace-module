@@ -17,6 +17,7 @@ resource "dynatrace_service_now_notification" "snow_integration" {
   name      = var.snow_name
   profile   = var.snow_alerting_profile_id
   username  = var.snow_username
+  password  = var.snow_password
   url       = var.snow_url
 
 }

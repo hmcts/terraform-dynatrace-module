@@ -26,12 +26,22 @@ variable "email_cc_receivers" { default = null }
 variable "enable_snow_integration" {
   default = false
 }
-variable "snow_enabled" { default = false }
-variable "snow_send_incidents" { default = false }
+variable "snow_enabled" {
+  type    = bool
+  default = false
+}
+variable "snow_send_incidents" {
+  type    = bool
+  default = false
+}
 variable "snow_message" { default = null }
 variable "snow_name" { default = null }
 variable "snow_alerting_profile_id" { default = null }
 variable "snow_username" { default = null }
+variable "snow_password" {
+  default   = null
+  sensitive = true
+}
 variable "snow_url" { default = null }
 
 
