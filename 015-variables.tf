@@ -5,6 +5,7 @@ variable "tenant_id" {
 variable "dynatrace_token" {
   type        = string
   description = "Dynatrace API access key"
+  sensitive   = true
 }
 variable "dt_alerts" {
   description = "Dynatrace Alerts"
