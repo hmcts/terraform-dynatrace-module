@@ -15,7 +15,7 @@ resource "dynatrace_alerting" "alerts" {
   }
   filters {
     dynamic "filter" {
-      for_each = try({ for key, f_filter in var.alert_filters : format("%.4d", key) => f_filter }, null) #var.alert_filters
+      for_each = try({ for key, f_filter in var.alert_filters : format("%.4d", key) => f_filter }, {}) #var.alert_filters
       content {
         predefined {
           negate = filter.value.negate
