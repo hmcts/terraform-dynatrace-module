@@ -27,7 +27,7 @@
 | <a name="input_alert_filters"></a> [alert\_filters](#input\_alert\_filters) | n/a | `map` | `{}` | no |
 | <a name="input_alert_rules"></a> [alert\_rules](#input\_alert\_rules) | n/a | `map` | `{}` | no |
 | <a name="input_alerting_profile_id"></a> [alerting\_profile\_id](#input\_alerting\_profile\_id) | n/a | `any` | `null` | no |
-| <a name="input_dt_alerts"></a> [dt\_alerts](#input\_dt\_alerts) | Dynatrace Alerts | `map` | `{}` | no |
+| <a name="input_dt_alerts"></a> [dt\_alerts](#input\_dt\_alerts) | Dynatrace Alerts | `list` | `[]` | no |
 | <a name="input_dynatrace_token"></a> [dynatrace\_token](#input\_dynatrace\_token) | Dynatrace API access key | `string` | n/a | yes |
 | <a name="input_email_body"></a> [email\_body](#input\_email\_body) | n/a | `any` | `null` | no |
 | <a name="input_email_cc_receivers"></a> [email\_cc\_receivers](#input\_email\_cc\_receivers) | n/a | `any` | `null` | no |

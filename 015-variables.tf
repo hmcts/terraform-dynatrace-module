@@ -8,7 +8,7 @@ variable "dynatrace_token" {
   sensitive   = true
 }
 variable "dt_alerts" {
-  default     = {}
+  default     = []
   description = "Dynatrace Alerts"
 }
 variable "enable_email_integration" {
