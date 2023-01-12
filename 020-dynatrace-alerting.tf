@@ -1,10 +1,10 @@
 resource "dynatrace_alerting" "alerts" {
-  for_each        = var.dt_alerts
+  for_each        = try(var.dt_alerts, {})
   name            = each.value.name
   management_zone = each.value.dt_management_zone
   rules {
     dynamic "rule" {
-      for_each = var.alert_rules
+      for_each = try(var.alert_rules, {})
       content {
         include_mode     = rule.value.include_mode
         tags             = var.tags
