@@ -1,5 +1,5 @@
 resource "dynatrace_alerting" "alerts" {
-  for_each        = try(var.dt_alerts, [])
+  for_each        = toset(try(var.dt_alerts, []))
   name            = each.value.name
   management_zone = each.value.dt_management_zone
   rules {
