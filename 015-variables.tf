@@ -8,13 +8,14 @@ variable "dynatrace_token" {
   sensitive   = true
 }
 variable "dt_alerts" {
+  default     = {}
   description = "Dynatrace Alerts"
 }
 variable "enable_email_integration" {
   default = false
 }
-variable "alert_rules" { default = null }
-variable "alert_filters" { default = null }
+variable "alert_rules" { default = {} }
+variable "alert_filters" { default = {} }
 variable "email_name" { default = null }
 variable "enabled" { default = false }
 variable "alerting_profile_id" { default = null }
