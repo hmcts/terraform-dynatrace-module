@@ -44,3 +44,8 @@ variable "snow_password" {
   sensitive = true
 }
 variable "snow_url" { default = null }
+
+
+variable "tags" {
+
+}
