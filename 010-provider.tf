@@ -3,7 +3,7 @@ terraform {
   #backend "azurerm" {}
   required_providers {
     dynatrace = {
-      version = "1.15.0"
+      version = "1.47.3"
       source  = "dynatrace-oss/dynatrace"
     }
   }
